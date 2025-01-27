@@ -4,8 +4,8 @@ let total = ans.length;
 function yesNO(qName){
     for(var i = 0; i < 4; i++){
         var x = qName + i;
-        if(document.getElementById("x").checked)
-            return document.getElementById("x").value;
+        if(document.getElementById(x).checked)
+            return document.getElementById(x).value;
     }
     return "E";
 }
@@ -13,7 +13,7 @@ function yesNO(qName){
 function score(){
     let scoree = 0;
     for(var i = 0; i<total; i++){
-        let qName = document.getElementById("q" + i+1);
+        let qName = "q" + (i + 1);
         if(yesNO(qName) === ans[i])
             scoree ++;
     }
